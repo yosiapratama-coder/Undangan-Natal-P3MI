@@ -1,0 +1,44 @@
+*{box-sizing:border-box}
+:root{--navy:#101b35;--gold:#e5c77b;--cream:#f7f1e5}
+html,body{margin:0;min-height:100%;font-family:Montserrat,Arial,sans-serif;background:#0b1327;color:var(--cream)}
+body{min-height:100vh;overflow-x:hidden;position:relative;background:radial-gradient(ellipse at 50% 38%,#26365a 0%,#111d39 42%,#080f20 100%)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+.ambient{position:fixed;border-radius:50%;filter:blur(70px);pointer-events:none;opacity:.2}
+.ambient-one{width:300px;height:300px;background:#b58b43;top:8%;left:-130px}
+.ambient-two{width:350px;height:350px;background:#243d78;right:-150px;bottom:4%}
+.topbar{height:76px;padding:0 6vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff17;position:relative;z-index:2}
+.brand{font-size:11px;letter-spacing:.24em;font-weight:700;color:var(--gold)}
+.brand-dot{display:inline-block;width:7px;height:7px;background:var(--gold);border-radius:50%;margin-right:10px;box-shadow:0 0 12px var(--gold)}
+.top-note{font-size:9px;letter-spacing:.19em;color:#d4d9e6a8}
+.hero{min-height:calc(100vh - 112px);display:flex;align-items:center;justify-content:center;padding:50px 20px 32px;position:relative;z-index:1}
+.invitation{width:min(720px,100%);text-align:center;position:relative;padding:12px 20px 26px;animation:rise 1.1s ease both}
+.logos{display:flex;justify-content:center;align-items:center;gap:18px;margin:0 auto 36px}
+.logo{width:92px;height:92px;object-fit:contain;background:#fff;padding:5px;border-radius:50%;box-shadow:0 0 0 1px #e5c77b70,0 8px 28px #0005;animation:logoFloat 5s ease-in-out infinite}
+.logo-p3mi{animation-delay:.4s}
+.logo-gmi{width:98px;height:98px}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:13px;color:var(--gold);font-size:9px;letter-spacing:.36em;font-weight:600;margin:0 0 15px}
+.eyebrow span{height:1px;width:28px;background:linear-gradient(90deg,transparent,var(--gold))}
+.eyebrow span:last-child{transform:rotate(180deg)}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(58px,10vw,100px);font-weight:600;line-height:.78;letter-spacing:-.035em;margin:0;color:#fff;text-shadow:0 5px 35px #0005}
+h1 em{font-weight:500;color:var(--gold);font-style:italic}
+.gold-line{width:64px;height:1px;background:var(--gold);margin:30px auto 23px;box-shadow:0 0 14px #e5c77b80}
+.church-name{font-size:12px;line-height:1.9;letter-spacing:.23em;color:#e9e5dc;margin:0}
+.church-name strong{font-weight:700;color:var(--gold)}
+.coming{display:flex;align-items:center;justify-content:center;gap:13px;margin:31px auto 14px;color:var(--gold);font-size:12px;letter-spacing:.42em;font-weight:700}
+.coming-light{width:5px;height:5px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px var(--gold);animation:pulse 1.8s infinite}
+.message{font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;line-height:1.35;color:#d9deea;margin:0}
+.ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin:27px auto 14px;color:var(--gold)}
+.ornament span{width:46px;height:1px;background:#e5c77b66}
+.ornament b{font-size:12px;font-weight:400}
+.verse{font-family:"Cormorant Garamond",Georgia,serif;font-size:17px;line-height:1.35;font-style:italic;color:#d7dceb;margin:0}
+.verse-ref{font-size:8px;letter-spacing:.3em;color:var(--gold);margin:10px 0 0}
+.bottom-caption{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:8px;letter-spacing:.5em;color:#ffffff4d}
+footer{text-align:center;padding:16px 12px 20px;color:#ffffff55;font-size:9px;letter-spacing:.08em;position:relative;z-index:2}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:3;overflow:hidden}
+.flake{position:absolute;top:-12px;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.65;box-shadow:0 0 7px #fff;animation:fall linear infinite}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0);opacity:.1}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes pulse{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+@media(max-width:600px){.topbar{height:62px;padding:0 18px}.top-note{font-size:7px;letter-spacing:.1em}.hero{min-height:calc(100svh - 104px);padding:30px 12px 40px}.invitation{padding:5px 7px 24px}.logos{gap:13px;margin-bottom:29px}.logo{width:76px;height:76px}.logo-gmi{width:82px;height:82px}.eyebrow{font-size:8px;letter-spacing:.25em}h1{font-size:clamp(55px,16vw,78px)}.church-name{font-size:10px}.coming{font-size:10px;letter-spacing:.32em;margin-top:27px}.message{font-size:19px}.verse{font-size:16px}.bottom-caption{bottom:9px}footer{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
